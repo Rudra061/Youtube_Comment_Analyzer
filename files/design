@@ -1,0 +1,8 @@
+Youtube Comment Extraction and sentiment analysis
+-------------------------------------------------
+
+Program that takes Youtube video url as a input and gives the sentiment analysis for the
+particular video from its comments.
+
+GUI can be implemented for this application
+
