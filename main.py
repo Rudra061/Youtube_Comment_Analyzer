@@ -5,7 +5,6 @@ from textblob import TextBlob
 import matplotlib.pyplot as plt
 
 
-
 def analyze_sentiment(comment):
     analysis = TextBlob(comment)
     polarity = analysis.sentiment.polarity
@@ -24,7 +23,7 @@ if __name__ == "__main__":
     api_key = os.getenv("YOUTUBE_API_KEY")
 
     # Enter the YouTube video link
-    input_url = Video_url(input("Enter Video Url : "))
+    input_url = Video_url(str(input("Enter Video Url : ")))
 
     video_id = input_url.extract_video_id()
     print(video_id)
@@ -48,7 +47,7 @@ if __name__ == "__main__":
     for comment in video_comments:
         sentiment = analyze_sentiment(comment)
         sentiment_counts[sentiment] += 1
-        #print(f"Comment: {comment} \nSentiment: {sentiment}\n")
+        # print(f"Comment: {comment} \nSentiment: {sentiment}\n")
 
     # Draw a pie chart
     labels = sentiment_counts.keys()

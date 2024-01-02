@@ -8,7 +8,7 @@ class YouTubeCommentsReader:
         self.api_key = api_key
         self.youtube = build("youtube", "v3", developerKey=self.api_key)
 
-    def get_video_comments(self, video_id, max_comments=1000):
+    def get_video_comments(self, video_id, max_comments=3000):
         request = self.youtube.commentThreads().list(
             part="snippet",
             videoId=video_id,
